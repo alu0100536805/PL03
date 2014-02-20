@@ -1,11 +1,11 @@
 var assert = chai.assert;
 
 suite('Resultados de los tests:', function() {
-    test('Detecta un header', function() {
+    test('Detecta un Header', function() {
         var tokens = lexer('[HOLA]');
 assert.equal(tokens[0].type,'header');
     });
-    test('Detecta un blanco', function() {
+    test('Detecta un Blanco', function() {
         var tokens = lexer(' ');
 assert.equal(tokens[0].type,'blanks');
     });
@@ -13,7 +13,7 @@ assert.equal(tokens[0].type,'blanks');
         var tokens = lexer('; Aqui un ejempl de comentario ');
 assert.equal(tokens[0].type,'comments');
     });
-    test('Detecta una asignacion', function() {
+    test('Detecta una Asignacion', function() {
         var tokens = lexer('Edad = 33');
 assert.equal(tokens[0].type,'nameEqualValue');
     });
